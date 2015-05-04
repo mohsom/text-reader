@@ -3,7 +3,7 @@
  */
 document.ready = function () {
     function readFile(e) {
-        var f= evt.target.files[0];
+        var f= e.target.files[0];
         var reader = new FileReader();
         reader.readAsText(f);
         reader.onload =function(){
