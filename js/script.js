@@ -3,7 +3,15 @@
  */
 document.ready = function () {
     function readFile(e) {
-        alert('dw');
+        var f= evt.target.files[0];
+        var reader = new FileReader();
+        reader.readAsText(f);
+        reader.onload =function(){
+            var text=reader.result;
+            var textElem=document.getElementById('book');
+            textElem.innerHTML='';
+            textElem.appendChild(document.createTextNode(text));
+        }
     }
     document.getElementById('file').addEventListener('change', readFile, false);
 };
