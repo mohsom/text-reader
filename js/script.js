@@ -5,6 +5,5 @@ document.ready = function () {
     function readFile(e) {
         alert('dw');
     }
-
     document.getElementById('file').addEventListener('change', readFile, false);
 };
